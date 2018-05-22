@@ -95,3 +95,12 @@ input{
     float: right;
     border-radius: 0 10px 10px 0;
 }
+
+.practice{
+    width: 1152px;
+    height: 100px;
+    margin: 0 auto;
+}
+.title{
+    text-align: center;
+}
