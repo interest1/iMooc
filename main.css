@@ -1,6 +1,9 @@
+/*global setting*/
 body{
     color: black;
+    background: lightgrey;
 }
+
 ul, li{
     padding: 0;
     margin: 0;
@@ -14,10 +17,11 @@ a{
 }
 
 
+/*header*/
 header{
     height: 72px;
-    border-bottom: 1px solid gray;
-    background: #add8e6;
+    border-bottom: 1px solid rgba(177, 177, 177, 0.6);
+    background: #fff;
 }
 header a:hover{
     font-weight: bold;
@@ -29,41 +33,105 @@ section{
 
 .logo{
     float: left;
-    margin: 18px 50px 18px 36px;
+    margin: 0 18px 0 24px;
+    height: 72px;
 }
 
 .search, .user{
-    display: inline-block;
+    /*display: inline-block;*/
+    float: left;
 }
 
 header ul{
     line-height: 72px;
-    display: inline-block;
+    /*display: inline-block;*/
+    float: left;
 }
 header ul li{
     display: inline-block;
     margin-right: 30px;
 }
 .search{
+    line-height: 72px;
     margin-left: 30px;
 }
 input{
-    width: 200px;
-    border-width: 0 0 2px 0;
+    width: 220px;
+    border: 1px solid #b3bdc6;
+    border-width: 0 0 1px 0;
+    outline: none;
+    padding-bottom: 10px;
 }
-/*用户中心*/
+input::-webkit-input-placeholder{
+    text-align: center;
+}
+button {
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    background: white;
+    border: 0;
+    margin-left: -30px;
+    outline: none;
+}
+button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: gray;
+}
+
+    /*用户中心*/
 .user{
     float: right;
     line-height: 72px;
     margin-right: 30px;
+    position: relative;
 }
-.app, .car, .notice, .profile{
+@media screen and (max-width:1300px){
+    header{
+        width: 1300px;
+    }
+    .user{
+        float: left;
+        line-height: 72px;
+        position: relative;
+        margin-left: 20px;
+    }
+}
+
+#app, .car, .notice, .profile{
     display: inline-block;
 }
+#app{
+    position: relative;
+}
+.appTitle{
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: lightblue;
+    border-radius: 10px;
+}
+#scan{
+    display: none;
+    position: absolute;
+    width: 300px;
+    right: 0;
+    top: 72px;
+    background: lightcoral;
+    border-radius: 10px;
+}
 .car{
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
     border: 1px solid gray;
     border-radius: 30px;
     padding: 0 10px 0 10px;
+    margin: 0 10px;
+    text-align: center;
 }
 /*menu*/
 .menu{
@@ -92,10 +160,10 @@ input{
     width: 912px;
     height: 434px;
     background: gray;
-    float: right;
+    float: left;
     border-radius: 0 10px 10px 0;
 }
-
+/*practice*/
 .practice{
     width: 1152px;
     height: 100px;

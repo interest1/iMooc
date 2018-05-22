@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 <header>
-    <img src="img/logo.ico" alt="" class="logo">
+    <img src="img/logo.png" alt="" class="logo">
     <ul>
         <li><a href="#">免费课程</a></li>
         <li><a href="#">职业路径</a></li>
@@ -18,10 +20,20 @@
     </ul>
     <div class="search">
         <input type="text" placeholder="前端入门 Java">
-        <button></button>
+        <button type="submit" value=""></button>
     </div>
     <div class="user">
-        <div class="app">下载app</div>
+        <div id="app">
+            <div class="appTitle">
+                下载app
+            </div>
+            <div id="scan">
+                <img src="img/2.jpg" alt="" class="code">
+                <span>扫描下载</span>
+                <div class="iOS">iOS下载</div>
+            </div>
+        </div>
+
         <div class="car">购物车</div>
         <div class="notice"></div>
         <img src="img/1.jpg" alt="" class="profile">
@@ -61,6 +73,6 @@
 <section class="teachers"></section>
 
 <footer></footer>
-
+<script src="main.js"></script>
 </body>
 </html>
