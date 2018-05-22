@@ -139,6 +139,10 @@ button:before {
     height: 434px;
     border-radius: 10px;
     margin: 30px auto;
+    position: relative;
+}
+.menu1{
+    padding-right: 100px;
 }
 .menu ul{
     width: 240px;
@@ -152,23 +156,53 @@ button:before {
 .menu ul li a{
     color: #ececec;
 }
-.items{
+
+.item1{
     display: none;
+    position: absolute;
+    width: 600px;
+    height: 434px;
+    border-radius: 0 5px 5px 0;
+    top: 0;
+    background: white;
+    left: 240px;
+    z-index: 2;
 }
+
+
+.jichu{
+    width: 400px;
+    background: lightblue;
+}
+.title{
+    margin: 20px;
+    font-weight: bold;
+}
+
+.content ul{
+    background: white;
+}
+.content ul li{
+    display: inline-block;
+}
+.content ul li a{
+    color: black;
+}
+
 
 .banner{
     width: 912px;
     height: 434px;
     background: gray;
-    float: left;
+    position: absolute;
+    top:0;
+    left: 240px;
     border-radius: 0 10px 10px 0;
 }
+
 /*practice*/
 .practice{
     width: 1152px;
     height: 100px;
     margin: 0 auto;
-}
-.title{
-    text-align: center;
 }
