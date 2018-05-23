@@ -108,18 +108,24 @@ button:before {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    background: lightblue;
+    background: rgba(188, 231, 245, 0.47);
     border-radius: 10px;
 }
-#scan{
+.scan{
     display: none;
     position: absolute;
-    width: 300px;
+    width: 304px;
+    height: 152px;
     right: 0;
-    top: 72px;
-    background: lightcoral;
+    background: white;
     border-radius: 10px;
+    z-index: 1;
 }
+.scan img{
+    width: 108px;
+    height: 108px;
+}
+
 .car{
     width: 90px;
     height: 40px;
