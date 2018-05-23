@@ -8,17 +8,21 @@ app.onmouseleave=function () {
     scan.style.display='none';
 }
 
+var seconds=document.getElementsByClassName('second');
 var items=document.getElementsByClassName('item');
 for (var i=0; i<items.length; i++){
     !function (i) {
         items[i].onmouseenter=function () {
             items[i].style.background='#a7a7a7'
+            seconds[i].style.display='block';
         }
         items[i].onmouseleave=function () {
             items[i].style.background='#4b4b4b'
+            seconds[i].style.display='none';
         }
     }(i)
 }
+
 
 var index=0;
 setInterval(function() {
