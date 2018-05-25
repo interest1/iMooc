@@ -119,11 +119,26 @@ button:before {
     right: 0;
     background: white;
     border-radius: 10px;
+    font-size: 12px;
     z-index: 1;
 }
 .scan img{
+    float: left;
     width: 108px;
     height: 108px;
+    margin: 22px;
+}
+.scan .download{
+    float: left;
+}
+.scan .download div{
+    height: 28px;
+    line-height: 28px;
+    padding: 8px 12px;
+    margin: 10px;
+    background: #4b4b4b;
+    border-radius: 20px;
+    color: #f7f7f7;
 }
 
 .car{
@@ -196,7 +211,7 @@ button:before {
     display: block;
 }
 .dots .active{
-    background: orange;
+    background: #f0f0f0;
 }
 .dots{
     position: absolute;
@@ -204,26 +219,22 @@ button:before {
     bottom: 140px;
 }
 .dots span{
-    width:15px;
-    height: 15px;
+    width:12px;
+    height: 12px;
     display: inline-block;
-    line-height: 15px;
 
-    background: #4d4d4d;
-    color: white;
+    background: #585858;
     cursor:pointer;
     margin-top: 10px;
-    border-radius: 7px;
-    text-align: center;
-    font-size: 12px;
+    border-radius: 6px;
 }
 .pathBanner{
     width: 936px;
     height: 128px;
 }
 
-/*practice*/
-.practice, .promotion{
+/*Courses*/
+.courses-practice{
     width: 1152px;
     height: 130px;
     margin: 0 auto;
@@ -232,22 +243,36 @@ button:before {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 60px;
+    margin: 60px 0 20px 0;
     letter-spacing: 5px;
+}
+.courses{
+    /*margin: 0;*/
+}
+.courses .course+.course{
+    margin-left: 20px;
 }
 .course{
     float: left;
-    position: relative;
-    margin: 6px;
 }
 .course img{
     width: 216px;
     height: 120px;
+    border-radius: 10px;
+    
 }
-.course span{
-    position: absolute;
-    bottom: -10px;
-    padding: 0px;
+.info{
+    width: 216px;
+}
+.info .h3{
+    margin: 0 auto;
+    font-size: 20px;
+}
+.info .info-detail{
+    margin: 10px;
+}
+.info .info-detail span{
+    margin: 5px;
 }
 
 

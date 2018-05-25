@@ -28,7 +28,7 @@ var index=0;
 setInterval(function() {
     index++;
     show(index%6);
-},2000);
+},4000);
 
 var pics=document.getElementById('banner').getElementsByTagName('img');
 var dots=document.getElementById('dots').getElementsByTagName('span');
