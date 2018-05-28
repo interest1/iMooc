@@ -4,40 +4,44 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .other{
-            width: 100px;
-            height: 100px;
-            background: lightskyblue;
-        }
-        .box{
-
-        }
-        .inner{
-            width: 100px;
-            height: 100px;
-            background: rgba(22,22,22,0.4);
+        .scan{
+            display: block;
             position: absolute;
+            width: 304px;
+            height: 152px;
+            right: 0;
+            background: #c1f1ff;
+            border-radius: 10px;
         }
-
-        .top1 {
-            position: absolute;
-            padding: 10px;
+        .scan img{
+            float: left;
+            width: 108px;
+            height: 108px;
+            margin: 22px;
+        }
+        .scan .download p{
+            float: left;
+            height: 20px;
+        }
+        .scan .download a{
+            height: 28px;
+            float: left;
+            margin-top: 10px;
+            background: #fdaf6d;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-
-<div class="other">other</div>
-<div class="box">
-    <div class="inner">inner</div>
+    <div class="scan" id="scan">
+        <img src="img/appload.png" alt="">
+        <div class="download">
+            <p>扫描下载慕课网APP</p>
+            <a href="#">App Store下载</a>
+            <a href="#">Android下载</a>
+        </div>
+    </div>
 </div>
-
-<img src="img/1.jpg" class="top1">
-<img src="img/banner/banner1.jpg">
-
-
-
-
 
 </body>
 </html>
