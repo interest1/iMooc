@@ -19,12 +19,13 @@ a{
 /*icon setting*/
 @font-face {
     font-family: 'iconfont';  /* project id 683052 */
-    src: url('//at.alicdn.com/t/font_683052_85rexgapk0dlsor.eot');
-    src: url('//at.alicdn.com/t/font_683052_85rexgapk0dlsor.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_683052_85rexgapk0dlsor.woff') format('woff'),
-    url('//at.alicdn.com/t/font_683052_85rexgapk0dlsor.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_683052_85rexgapk0dlsor.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_683052_yp3ksw7mpgqwu3di.eot');
+    src: url('//at.alicdn.com/t/font_683052_yp3ksw7mpgqwu3di.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_683052_yp3ksw7mpgqwu3di.woff') format('woff'),
+    url('//at.alicdn.com/t/font_683052_yp3ksw7mpgqwu3di.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_683052_yp3ksw7mpgqwu3di.svg#iconfont') format('svg');
 }
+
 .icon{
     font-family:"iconfont" !important;
     font-size:16px;font-style:normal;
@@ -35,6 +36,9 @@ a{
 
 .icon-car:before {
     content: '\e601';
+}
+.icon-notice:before {
+    content: '\e605';
 }
 .icon-arrow:before {
     content: '\e61f';
@@ -53,6 +57,21 @@ a{
 }
 .icon-goTop:before {
     content: '\e64e';
+}
+.icon-a:before {
+    content: '\e607';
+}
+.icon-b:before {
+    content: '\e619';
+}
+.icon-c:before {
+    content: '\e631';
+}
+.icon-d:before {
+    content: '\e602';
+}
+.icon-e:before {
+    content: '\e655';
 }
 
 
@@ -94,7 +113,7 @@ header ul li{
     margin-left: 30px;
 }
 input{
-    width: 220px;
+    width: 320px;
     border: 1px solid #b3bdc6;
     border-width: 0 0 1px 0;
     outline: none;
@@ -193,6 +212,17 @@ button:before {
 .car span{
     margin-left: 10px;
 }
+.user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.user .profile{
+    height: 72px;
+    display: inline-block;
+}
+
+
 /*menu*/
 .middle{
     width: 1152px;
@@ -231,7 +261,7 @@ button:before {
 
 .banners{
     width: 936px;
-    height: 440px;
+    height: 312px;
     background: gray;
     position: absolute;
     top:0;
@@ -257,7 +287,7 @@ button:before {
 .dots{
     position: absolute;
     right: 30px;
-    bottom: 140px;
+    bottom: 20px;
 }
 .dots span{
     width:12px;
@@ -272,11 +302,20 @@ button:before {
 .pathBanner{
     width: 936px;
     height: 128px;
-}
-.pathBanner a{
     position: absolute;
     top: 312px;
     left: 216px;
+    background: white;
+}
+.pathBanner .pathItem{
+    float: left;
+    width: 130px;
+    margin: 25px;
+    text-align: center;
+}
+.desc{
+    font-size: 11px;
+    color: #b1b1b1;
 }
 
 /*Courses*/
@@ -305,14 +344,14 @@ button:before {
     width: 216px;
     height: 120px;
     border-radius: 10px;
-    
+
 }
 .info{
     width: 216px;
 }
 .info .h3{
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 16px;
 }
 .info .info-detail{
     margin: 10px 10px 10px 0;
