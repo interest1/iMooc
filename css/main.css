@@ -113,7 +113,7 @@ header ul li{
     margin-left: 30px;
 }
 input{
-    width: 320px;
+    width: 300px;
     border: 1px solid #b3bdc6;
     border-width: 0 0 1px 0;
     outline: none;
@@ -149,15 +149,19 @@ button:before {
     header{
         width: 1300px;
     }
+    input{
+        width: 200px;
+    }
     .user{
         float: left;
         line-height: 72px;
         position: relative;
         margin-left: 20px;
+        display: inline-block;
     }
 }
 
-.app, .car, .notice, .profile{
+.app, .car, .profile{
     display: inline-block;
 }
 .app{
@@ -193,7 +197,7 @@ button:before {
     line-height: 32px;
     padding: 3px 15px;
     margin: 4px 0;
-
+    width: 83px;
     color: #e9e9e9;
     background: #505050;
     border-radius: 21px;
@@ -206,20 +210,27 @@ button:before {
     border: 1px solid gray;
     border-radius: 30px;
     padding: 0 10px 0 10px;
-    margin: 0 10px;
+    margin: 0 20px;
     text-align: center;
 }
 .car span{
-    margin-left: 10px;
+    margin-left: 5px;
 }
-.user img{
+.profile img{
     width: 40px;
     height: 40px;
     border-radius: 20px;
+    vertical-align:middle;
 }
 .user .profile{
     height: 72px;
-    display: inline-block;
+    width: 40px;
+    margin-left: 20px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    float: right;
+    /*display: inline-block;*/
 }
 
 
