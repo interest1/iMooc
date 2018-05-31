@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 300px;
+            background: greenyellow;
+            /*position: relative;*/
+
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+
+            /*display: flex;*/
+            /*justify-content: center;*/
+            /*align-items:center;*/
+        }
+        img{
+            vertical-align:middle;
+
+            /*position: absolute;*/
+            /*top: 50%;*/
+            /*left: 50%;*/
+            /*transform: translate(-50%,-50%);*/
+        }
+        .content{
+            width: 60px;
+            height: 40px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: lightskyblue;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="img/user.jpg">
+    <!--<div class="content">hello</div>-->
+</div>
+
+<script>
+    // for (var i=1; i<=5; i++){
+    //     setTimeout(function (i) {
+    //         return function () {
+    //             console.log(i);
+    //         }
+    //     }(i),1000)
+    // }
+
+    function foo() {
+        return function (i) {
+            console.log(i);
+        }
+    }
+    foo()(5)
+    var bar=foo();
+    bar(5)
+</script>
+</body>
+</html>

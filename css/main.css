@@ -216,23 +216,35 @@ button:before {
 .car span{
     margin-left: 5px;
 }
-.profile img{
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    vertical-align:middle;
-}
+
 .user .profile{
     height: 72px;
     width: 40px;
     margin-left: 20px;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    float: right;
-    /*display: inline-block;*/
-}
 
+    float: right;
+    position: relative;
+
+    /*text-align: center;*/
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+.profile img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    /*vertical-align:middle;*/
+}
 
 /*menu*/
 .middle{
@@ -317,12 +329,13 @@ button:before {
     top: 312px;
     left: 216px;
     background: white;
+    overflow: hidden;
+    text-align: center;
 }
 .pathBanner .pathItem{
     float: left;
     width: 130px;
-    margin: 25px;
-    text-align: center;
+    margin: 28px;
 }
 .desc{
     font-size: 11px;
@@ -388,7 +401,7 @@ button:before {
 .side{
     position: fixed;
     right: 0;
-    bottom: 100px;
+    bottom: 50px;
 }
 .feedback, .problem, .dload, .goTop{
     width: 50px;
