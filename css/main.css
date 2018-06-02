@@ -19,11 +19,11 @@ a{
 /*icon setting*/
 @font-face {
     font-family: 'iconfont';  /* project id 683052 */
-    src: url('//at.alicdn.com/t/font_683052_yp3ksw7mpgqwu3di.eot');
-    src: url('//at.alicdn.com/t/font_683052_yp3ksw7mpgqwu3di.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_683052_yp3ksw7mpgqwu3di.woff') format('woff'),
-    url('//at.alicdn.com/t/font_683052_yp3ksw7mpgqwu3di.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_683052_yp3ksw7mpgqwu3di.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_683052_6jljlakmf60nqaor.eot');
+    src: url('//at.alicdn.com/t/font_683052_6jljlakmf60nqaor.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_683052_6jljlakmf60nqaor.woff') format('woff'),
+    url('//at.alicdn.com/t/font_683052_6jljlakmf60nqaor.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_683052_6jljlakmf60nqaor.svg#iconfont') format('svg');
 }
 
 .icon{
@@ -34,6 +34,10 @@ a{
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search:before {
+    content: '\e7b7';
+    margin-left: -10px;
+}
 .icon-car:before {
     content: '\e601';
 }
@@ -131,12 +135,12 @@ button {
     margin-left: -30px;
     outline: none;
 }
-button:before {
-    content: "\f002";
-    font-family: FontAwesome;
-    font-size: 16px;
-    color: gray;
-}
+/*button:before {*/
+    /*content: "\f002";*/
+    /*font-family: FontAwesome;*/
+    /*font-size: 16px;*/
+    /*color: gray;*/
+/*}*/
 
     /*用户中心*/
 .user{
