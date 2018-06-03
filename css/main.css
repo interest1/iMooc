@@ -116,7 +116,7 @@ header ul li{
     line-height: 72px;
     margin-left: 30px;
 }
-input{
+.search input{
     width: 300px;
     border: 1px solid #b3bdc6;
     border-width: 0 0 1px 0;
@@ -126,7 +126,7 @@ input{
 input::-webkit-input-placeholder{
     text-align: center;
 }
-button {
+.search button {
     height: 36px;
     width: 36px;
     cursor: pointer;
@@ -149,11 +149,11 @@ button {
     margin-right: 30px;
     position: relative;
 }
-@media screen and (max-width:1300px){
+@media screen and (max-width:1350px){
     header{
-        width: 1300px;
+        width: 1350px;
     }
-    input{
+    .search input{
         width: 200px;
     }
     .user{
@@ -221,34 +221,36 @@ button {
     margin-left: 5px;
 }
 
-.user .profile{
-    height: 72px;
-    width: 40px;
+.user .sign-in {
+    /*height: 72px;*/
+    width: 75px;
     margin-left: 20px;
 
     float: right;
     position: relative;
-
-    /*text-align: center;*/
-    /*display: table-cell;*/
-    /*vertical-align: middle;*/
-
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
 }
-.profile img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -20px;
-    margin-left: -20px;
 
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    /*vertical-align:middle;*/
-}
+/*.user .profile{*/
+    /*height: 72px;*/
+    /*width: 40px;*/
+    /*margin-left: 20px;*/
+
+    /*float: right;*/
+    /*position: relative;*/
+/*}*/
+/*.profile img{*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*margin-top: -20px;*/
+    /*margin-left: -20px;*/
+
+    /*width: 40px;*/
+    /*height: 40px;*/
+    /*border-radius: 20px;*/
+/*}*/
+
+
 
 /*menu*/
 .middle{
@@ -419,3 +421,26 @@ button {
     display: none;
 }
 
+.backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #000;
+    opacity: 0.1;
+    background-size: cover;
+}
+
+.sign-form{
+    width: 300px;
+    height: 300px;
+    background: white;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    position: absolute;
+}
+.sign-form input{
+    margin: 10px 0;
+}

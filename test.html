@@ -4,44 +4,32 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .scan{
-            display: block;
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .top{
+            width: 200px;
+            height: 200px;
+            background: blueviolet;
+            position: relative;
+        }
+        .center{
+            width: 200px;
+            height: 200px;
+            background: blueviolet;
             position: absolute;
-            width: 304px;
-            height: 152px;
-            right: 0;
-            background: #c1f1ff;
-            border-radius: 10px;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
         }
-        .scan img{
-            float: left;
-            width: 108px;
-            height: 108px;
-            margin: 22px;
-        }
-        .scan .download p{
-            float: left;
-            height: 20px;
-        }
-        .scan .download a{
-            height: 28px;
-            float: left;
-            margin-top: 10px;
-            background: #fdaf6d;
-            border-radius: 10px;
-        }
+
     </style>
 </head>
 <body>
-    <div class="scan" id="scan">
-        <img src="img/appload.png" alt="">
-        <div class="download">
-            <p>扫描下载慕课网APP</p>
-            <a href="#">App Store下载</a>
-            <a href="#">Android下载</a>
-        </div>
-    </div>
-</div>
+    <div class="top"></div>
+    <div class="center"></div>
 
 </body>
 </html>

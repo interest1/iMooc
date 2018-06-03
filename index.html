@@ -41,9 +41,13 @@
             <span>购物车</span>
         </div>
         <i class="icon icon-notice"></i>
-        <div class="profile">
-            <img src="img/user.jpg">
+        <div class="sign-in">
+            <a href="#" id="signInBtn">登录</a>&nbsp;
+            <a href="#" id="signUpBtn">注册</a>
         </div>
+        <!--<div class="profile">-->
+            <!--<img src="img/user.jpg">-->
+        <!--</div>-->
     </div>
 
 </header>
@@ -422,6 +426,21 @@
         <!--<div style="clear: both"></div>-->
     </div>
 </footer>
+
+<div class="backdrop"></div>
+<div class="sign-form" id="signForm">
+    <div class="sign-head">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <i class="icon icon-cancel"></i>
+    </div>
+    <div class="sign-input">
+        <input type="text" placeholder="请输入登录邮箱/手机号">
+        <div id="remind"></div>
+        <input type="text" placeholder="6-16位密码，区分大小写，不能用空格">
+    </div>
+    <button>登录</button>
+</div>
 <script src="js/main.js"></script>
 <script src="js/move.js"></script>
 <script src="js/banner.js"></script>

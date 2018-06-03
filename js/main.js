@@ -1,3 +1,28 @@
+var signin=document.getElementById('signInBtn');
+var signup=document.getElementById('signUpBtn');
+
+var signform=document.getElementById('signForm');
+var remind=document.getElementById('remind');
+
+signin.onclick=function () {
+    signform.style.display='block';
+}
+signup.onclick=function () {
+    scan.style.display='none';
+}
+
+function validate(num) {
+    if(num.length!=11){
+        remind.innerText='请输入正确的手机号'
+    }
+    var reg=/^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+    if(reg.test(num)){
+        remind.innerText='请输入正确的手机号'
+    }
+}
+
+
+//悬停触发下载App二维码弹出层
 var app=document.getElementById('app');
 var scan=document.getElementById('scan');
 
