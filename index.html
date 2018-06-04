@@ -427,17 +427,18 @@
     </div>
 </footer>
 
-<div class="backdrop"></div>
+<div class="backdrop" id="backdrop"></div>
 <div class="sign-form" id="signForm">
     <div class="sign-head">
-        <a href="#">登录</a>
-        <a href="#">注册</a>
+        <span id="headSignIn">登录</span>
+        <span id="headSignUp">注册</span>
         <i class="icon icon-cancel"></i>
     </div>
     <div class="sign-input">
-        <input type="text" placeholder="请输入登录邮箱/手机号" id="validatePhone" onblur="validate()">
-        <div id="remind"></div>
-        <input type="text" placeholder="6-16位密码，区分大小写，不能用空格">
+        <input type="text" placeholder="请输入登录邮箱/手机号" id="checkUserName" onblur="validate()">
+        <div id="remindUserName"></div>
+        <input type="text" placeholder="6-16位密码，区分大小写" id="checkPassWd" onblur="validate()">
+        <div id="remindPassWd"></div>
     </div>
     <button>登录</button>
 </div>
