@@ -19,8 +19,11 @@ signUpBtn.onclick=function () {
     backdrop.style.display='block';
     headSignUp.style.color='red';
 }
+var cancel=document.getElementsByClassName('icon-cancel')[0];
+backdrop.onclick=turnOffForm;
+cancel.onclick=turnOffForm;
 
-backdrop.onclick=function () {
+function turnOffForm() {
     signForm.style.display='none';
     backdrop.style.display='none';
 }
@@ -32,7 +35,6 @@ headSignUp.onclick=function () {
     headSignUp.style.color='red';
     headSignIn.style.color='black';
 }
-
 
 function validate() {
     var username=document.getElementById('checkUserName').value;
@@ -50,9 +52,6 @@ function validate() {
     }
     if(!isPasswd.test(passwd)){
         remindPassWd.innerText='请输入有效的密码';
-        remindPassWd.style.color='red';
-    }else{
-        remindPassWd.innerText='密码有效'
         remindPassWd.style.color='red';
     }
 }

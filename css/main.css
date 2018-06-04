@@ -19,11 +19,11 @@ a{
 /*icon setting*/
 @font-face {
     font-family: 'iconfont';  /* project id 683052 */
-    src: url('//at.alicdn.com/t/font_683052_6jljlakmf60nqaor.eot');
-    src: url('//at.alicdn.com/t/font_683052_6jljlakmf60nqaor.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_683052_6jljlakmf60nqaor.woff') format('woff'),
-    url('//at.alicdn.com/t/font_683052_6jljlakmf60nqaor.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_683052_6jljlakmf60nqaor.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_683052_0gicf9f83us7nwmi.eot');
+    src: url('//at.alicdn.com/t/font_683052_0gicf9f83us7nwmi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_683052_0gicf9f83us7nwmi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_683052_0gicf9f83us7nwmi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_683052_0gicf9f83us7nwmi.svg#iconfont') format('svg');
 }
 
 .icon{
@@ -77,6 +77,11 @@ a{
 .icon-e:before {
     content: '\e655';
 }
+.icon-cancel:before {
+    content: '\e62f';
+    float: right;
+}
+
 
 
 
@@ -436,17 +441,42 @@ input::-webkit-input-placeholder{
     display: none;
     width: 300px;
     height: 200px;
-    background: white;
+    background: lightblue;
     left: 50%;
     top: 50%;
     margin-left: -150px;
-    margin-top: -150px;
+    margin-top: -100px;
     position: absolute;
+    text-align: center;
 }
-.sign-form input{
-    margin: 10px 0;
+.sign-head{
+    width: 200px;
+    margin: 10px auto;
+    text-align: center;
 }
 .sign-head span:hover{
     cursor: pointer;
     color: red;
+}
+
+.sign-form .sign-input{
+    width: 200px;
+    margin: 0 auto;
+}
+.sign-form .sign-input input{
+    width: 200px;
+    height: 30px;
+}
+
+.sign-input div{
+    height: 24px;
+}
+.sign-form button{
+    width: 150px;
+    height: 30px;
+    background: red;
+    color: white;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
 }

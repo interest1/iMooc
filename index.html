@@ -437,10 +437,10 @@
     <div class="sign-input">
         <input type="text" placeholder="请输入登录邮箱/手机号" id="checkUserName" onblur="validate()">
         <div id="remindUserName"></div>
-        <input type="text" placeholder="6-16位密码，区分大小写" id="checkPassWd" onblur="validate()">
+        <input type="password" placeholder="6-16位密码，区分大小写" id="checkPassWd">
         <div id="remindPassWd"></div>
     </div>
-    <button>登录</button>
+    <button onclick="validate()">登录</button>
 </div>
 <script src="js/main.js"></script>
 <script src="js/move.js"></script>
