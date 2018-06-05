@@ -41,7 +41,7 @@ function validate() {
     var passwd=document.getElementById('checkPassWd').value;
 
     var isPhone = /^[1][3,4,5,7,8][0-9]{9}$/;
-    var isEmail = /^\w+@[a-zA-Z0-9]{2,10}(?:\.[a-z]{2,4}){1,3}$/;
+    var isEmail = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
     var isPasswd=  /^[A-Za-z0-9]{6,16}$/;
     if(!isPhone.test(username) && !isEmail.test(username)){
         remindUserName.innerText='请输入正确的手机号或邮箱';
