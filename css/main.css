@@ -38,6 +38,9 @@ a{
     content: '\e7b7';
     margin-left: -10px;
 }
+.icon-search:hover{
+    cursor: pointer;
+}
 .icon-car:before {
     content: '\e601';
 }
@@ -131,21 +134,6 @@ header ul li{
 input::-webkit-input-placeholder{
     text-align: center;
 }
-.search button {
-    height: 36px;
-    width: 36px;
-    cursor: pointer;
-    background: white;
-    border: 0;
-    margin-left: -30px;
-    outline: none;
-}
-/*button:before {*/
-    /*content: "\f002";*/
-    /*font-family: FontAwesome;*/
-    /*font-size: 16px;*/
-    /*color: gray;*/
-/*}*/
 
     /*用户中心*/
 .user{

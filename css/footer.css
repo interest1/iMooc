@@ -18,12 +18,21 @@ footer{
 }
 .left ul li{
     display: inline-block;
+    font-size: 14px;
 }
+.left ul li a{
+    color: gray;
+}
+.left ul li a:hover{
+    color: black;
+}
+
 .left ul li+li{
     margin-left: 20px;
 }
 .copyright{
     margin: 10px 0;
+    font-size: 12px;
 }
 
 .right{
