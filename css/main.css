@@ -92,8 +92,10 @@ a{
 /*header*/
 header{
     height: 72px;
-    border-bottom: 1px solid rgba(177, 177, 177, 0.6);
+    /*border-bottom: 1px solid rgba(177, 177, 177, 0.6);*/
     background: #fff;
+    box-shadow: 2px 2px 15px #b3bdc6;
+
 }
 header ul li a:hover{
     font-weight: bold;
@@ -247,9 +249,19 @@ input::-webkit-input-placeholder{
 
 /*menu*/
 .middle{
+    width: 100%;
+    padding: 30px 0;
+    height: 504px;
+    /*background: lightblue;*/
+    background: -webkit-linear-gradient(rgba(161, 21, 255, 0.1), #f7f7f7);
+    background: -o-linear-gradient(rgba(161, 21, 255, 0.1), #f7f7f7);
+    background: -moz-linear-gradient(rgba(161, 21, 255, 0.1), #f7f7f7);
+    background: linear-gradient(rgba(161, 21, 255, 0.1), #f7f7f7);
+}
+.container{
     width: 1152px;
     height: 444px;
-    margin: 20px auto;
+    margin: 0 auto;
     position: relative;
 }
 .menu{
