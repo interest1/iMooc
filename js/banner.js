@@ -8,6 +8,7 @@ setInterval(function() {
 
 var pics=document.getElementById('banner').getElementsByTagName('img');
 var dots=document.getElementById('dots').getElementsByTagName('span');
+
 for(var i=0;i<6;i++) {
     dots[i].id=i;//为按钮们赋id,当然也可以在html里赋值
     dots[i].onclick=function () {
@@ -23,6 +24,7 @@ function show(index) {
     }
     pics[index].style.display='block';
     dots[index].className='active';
+    // middle.style.background='linear-gradient(red, white);';
 }
 
 
