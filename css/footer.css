@@ -40,8 +40,9 @@ footer{
 }
 
 .weixin{
-    float: left;
+    display: inline-block;
     margin-right: 60px;
+    text-align: center;
 }
 .weixin img{
     -webkit-border-radius: 10px;
@@ -49,7 +50,7 @@ footer{
     border-radius: 10px;
 }
 .weixin span{
-    position: absolute;
+    display: block;
 }
 
 .clearfix:before,
