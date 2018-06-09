@@ -379,6 +379,7 @@ input::-webkit-input-placeholder{
     width: 216px;
     height: 120px;
     border-radius: 10px;
+    background: url(../img/loading.gif) 50% no-repeat;
 
 }
 .info{
@@ -426,6 +427,7 @@ input::-webkit-input-placeholder{
     display: none;
 }
 
+/*alert form*/
 .backdrop{
     display: none;
     position: fixed;

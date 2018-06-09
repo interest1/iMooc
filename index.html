@@ -189,18 +189,12 @@
 
         <div class="banners">
             <div class="banner" id="banner">
-                <img class="act" src="http://www.enjooy.top/img/banner/banner1.jpg">
-                <img src="http://www.enjooy.top/img/banner/banner2.jpg">
-                <img src="http://www.enjooy.top/img/banner/banner3.jpg">
-                <img src="http://www.enjooy.top/img/banner/banner4.jpg">
-                <img src="http://www.enjooy.top/img/banner/banner5.jpg">
-                <img src="http://www.enjooy.top/img/banner/banner6.jpg">
-                <!--<img class="act" src="img/banner/banner1.jpg">-->
-                <!--<img src="img/banner/banner2.jpg">-->
-                <!--<img src="img/banner/banner3.jpg">-->
-                <!--<img src="img/banner/banner4.jpg">-->
-                <!--<img src="img/banner/banner5.jpg">-->
-                <!--<img src="img/banner/banner6.jpg">-->
+                <img class="act" src="img/banner/banner1.jpg">
+                <img src="img/banner/banner2.jpg">
+                <img src="img/banner/banner3.jpg">
+                <img src="img/banner/banner4.jpg">
+                <img src="img/banner/banner5.jpg">
+                <img src="img/banner/banner6.jpg">
             </div>
             <div class="dots" id='dots'>
                 <span class="active"></span>
@@ -319,7 +313,7 @@
 
     <div class="courses clearfix">
         <div class="course">
-            <img src="img/course/f1.jpg" alt="">
+            <img class="lazy" src="img/blank.gif" data-echo="img/course/f1.jpg" alt="">
             <div class="info">
                 <div class="h3">前端小白入门：网页布局基础与常见网页特效</div>
                 <div class="info-detail">
@@ -332,7 +326,7 @@
         </div>
 
         <div class="course">
-            <img src="img/course/f2.jpg" alt="">
+            <img class="lazy" src="img/blank.gif" data-echo="img/course/f2.jpg" alt="">
             <div class="info">
                 <div class="h3">Java零基础入门：语法、面向对象与工具类</div>
                 <div class="info-detail">
@@ -344,7 +338,7 @@
             </div>
         </div>
         <div class="course">
-            <img src="img/course/f3.jpg" alt="">
+            <img class="lazy" src="img/blank.gif" data-echo="img/course/f3.jpg" alt="">
             <div class="info">
                 <div class="h3">Storm基础入门</div>
                 <div class="info-detail">
@@ -356,7 +350,7 @@
             </div>
         </div>
         <div class="course">
-            <img src="img/course/f4.jpg" alt="">
+            <img class="lazy" src="img/blank.gif" data-echo="img/course/f4.jpg" alt="">
             <div class="info">
                 <div class="h3">C++零基础入门 热门编程语言 二级考试必备</div>
                 <div class="info-detail">
@@ -368,7 +362,7 @@
             </div>
         </div>
         <div class="course">
-            <img src="img/course/f5.jpg" alt="">
+            <img class="lazy" src="img/blank.gif" data-echo="img/course/f5.jpg" alt="">
             <div class="info">
                 <div class="h3">微信小程序入门与实战 常用组件API开发技巧项目实战</div>
                 <div class="info-detail">
@@ -450,8 +444,15 @@
     <button onclick="validate()">登录</button>
 </div>
 <script src="js/main.js"></script>
-<script src="js/move.js"></script>
 <script src="js/banner.js"></script>
+<script src="js/move.js"></script>
 <script src="js/alert_layer.js"></script>
+<script src="js/echo.js"></script>
+<script>
+    Echo.init({
+        offset:0,
+        throttle:0
+    })
+</script>
 </body>
 </html>
