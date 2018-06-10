@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        input{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-<script>
-    console.log('a');
-    while(true){
-
+<script   language="javascript">
+    function   cc()
+    {
+        var   e   =   event.srcElement;
+        var   r   =e.createTextRange();
+        r.moveStart('character',e.value.length-3);
+        r.collapse(true);
+        r.select();
     }
-    console.log('b');
 </script>
+<input   type=text   name=text1   value="123"   onfocus="cc()">
 </body>
 </html>
