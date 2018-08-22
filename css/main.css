@@ -67,18 +67,23 @@ a{
     content: '\e64e';
 }
 .icon-a:before {
+    color: orange;
     content: '\e607';
 }
 .icon-b:before {
+    color: deeppink;
     content: '\e619';
 }
 .icon-c:before {
+    color: green;
     content: '\e631';
 }
 .icon-d:before {
+    color: red;
     content: '\e602';
 }
 .icon-e:before {
+    color: blue;
     content: '\e655';
 }
 .icon-cancel:before {
@@ -88,8 +93,6 @@ a{
 .icon-cancel:hover {
     color: red;
 }
-
-
 
 
 

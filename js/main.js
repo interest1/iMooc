@@ -21,8 +21,14 @@ for (var i=0; i<items.length; i++){
 // 返回顶部
 var goTop=document.getElementById('goTop');
 goTop.onclick=function back() {
-    document.documentElement.scrollTop=0;
-}
+    timer=setInterval(function () {
+        if(document.documentElement.scrollTop!=0)
+            document.documentElement.scrollTop-=20
+        else{
+            clearInterval(timer)
+        }
+    },10)
+};
 var feedback=document.getElementById('feedback');
 var problem=document.getElementById('problem');
 var dload=document.getElementById('dload');

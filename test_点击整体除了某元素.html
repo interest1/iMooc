@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-size: 20px;
+        }
+        .box, .single{
+            border: 1px solid #000;
+            width: 300px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">box</div>
+    <div class="box">box</div>
+    <div class="box">box</div>
+    <p>paragraph</p>
+    <div class="single">box</div>
+</div>
+
+<div><button>btn</button></div>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script>
+    var test=$('.container').children().not('.single');
+    // console.log(test);
+    test.click(function () {
+        console.log(this);
+    });
+
+    $(document).click(function(){
+        alert("document");
+    });
+    $("div").click(function(e){
+        e.stopPropagation();
+        alert("div");
+    });
+    $(":button").click(function(e){
+        // e.stopPropagation();
+        alert("button");
+    });
+</script>
+</body>
+</html>
