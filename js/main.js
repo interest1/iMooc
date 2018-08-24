@@ -17,7 +17,6 @@ for (var i=0; i<items.length; i++){
 }
 
 
-
 // 返回顶部
 var goTop=document.getElementById('goTop');
 goTop.onclick=function back() {

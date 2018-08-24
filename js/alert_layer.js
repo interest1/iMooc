@@ -1,34 +1,16 @@
-var signInBtn=document.getElementById('signInBtn');
-var signUpBtn=document.getElementById('signUpBtn');
+var backdrop=$('#backdrop');
+var signForm=$('#signForm');
 
-var signForm=document.getElementById('signForm');
-var backdrop=document.getElementById('backdrop');
+$('#signInBtn, #signUpBtn').click(function () {
+    $('#signForm, #backdrop').show()
+    $('#headSignIn').css('color','red');
+    $('#headSignUp').css('color','black');
+})
 
-var headSignIn=document.getElementById('headSignIn');
-var headSignUp=document.getElementById('headSignUp');
-
-var remindUserName=document.getElementById('remindUserName');
-var remindPassWd=document.getElementById('remindPassWd');
-
-signInBtn.onclick=function () {
-    signForm.style.display='block';
-    backdrop.style.display='block';
-    headSignIn.style.color='red';
-    headSignUp.style.color='black';
-}
-signUpBtn.onclick=function () {
-    signForm.style.display='block';
-    backdrop.style.display='block';
-    headSignUp.style.color='red';
-    headSignIn.style.color='black';
-}
-var cancel=document.getElementsByClassName('icon-cancel')[0];
-backdrop.onclick=turnOffForm;
-cancel.onclick=turnOffForm;
+$('.icon-cancel, #backdrop').click(turnOffForm);
 
 function turnOffForm() {
-    signForm.style.display='none';
-    backdrop.style.display='none';
+    $('#signForm, #backdrop').hide();
 }
 headSignIn.onclick=function () {
     headSignIn.style.color='red';
@@ -48,6 +30,10 @@ login.onclick=function () {
         turnOffForm();
     }
 };
+
+
+var remindUserName=$('#remindUserName')[0];
+var remindPassWd=$('#remindPassWd')[0];
 
 function checkName() {
     var name=username.value;
@@ -75,12 +61,10 @@ function checkPwd() {
 
 
 //悬停触发下载App二维码弹出层
-var app=document.getElementById('app');
-var scan=document.getElementById('scan');
 
-app.onmouseenter=function () {
-    scan.style.display='block';
-}
-app.onmouseleave=function () {
-    scan.style.display='none';
-}
+$('#app').mouseenter(function () {
+    $('#scan').show();
+})
+$('#app').mouseleave(function () {
+    $('#scan').hide();
+})

@@ -1,0 +1,41 @@
+.course-overview{
+    height: 475px;
+
+    background-image: url(../img/coursePage/bg1.jpg);
+    -webkit-background-size: 100% 475px;
+    background-size: 100% 475px;
+    overflow: hidden;
+}
+.overview-container{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+.overview-head{
+    text-align: left;
+}
+.overview-text{
+    margin-top: 90px;
+}
+.overview-text h1{
+    font-weight: normal;
+    text-shadow: 0 2px 4px rgba(28, 31, 33, 0.6);
+}
+
+/*tabs栏*/
+.tabs{
+    width: 660px;
+    line-height: 40px;
+    margin: 0 auto;
+}
+.tabs ul{
+}
+.tabs ul li{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+}
+.tabs ul li+li{
+    margin-left: 50px;
+}
