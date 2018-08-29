@@ -442,7 +442,6 @@ input::-webkit-input-placeholder{
     display: none;
 }
 
-/*alert form*/
 .backdrop{
     display: none;
     position: fixed;
@@ -453,7 +452,7 @@ input::-webkit-input-placeholder{
     opacity: 0.7;
     background-size: cover;
 }
-
+/*弹出框*/
 .sign-form{
     font-size: 14px;
     display: none;
@@ -466,22 +465,23 @@ input::-webkit-input-placeholder{
     position: fixed;
     text-align: center;
 }
+/*弹出框头部*/
 .sign-head{
     margin: 10px;
     padding: 10px;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     border-bottom: 2px solid lightgray;
 
 }
 .sign-head span{
-    margin: 20px;
+    padding: 10px;
 }
 .sign-head span:hover{
     cursor: pointer;
     color: red;
 }
-
+/*弹出框输入框部分*/
 .sign-form .sign-input{
     width: 300px;
     margin: 0 auto;
@@ -501,7 +501,7 @@ input::-webkit-input-placeholder{
 .sign-input div{
     height: 24px;
 }
-
+/*弹出框提示*/
 .sign-tips{
     width: 300px;
     margin: 0 auto;
@@ -509,9 +509,13 @@ input::-webkit-input-placeholder{
 .sign-tips input{
     float: left;
 }
+.auto-login{
+    float: left;
+}
 .forget-pwd{
     float: right;
 }
+
 .sign-form button{
     width: 300px;
     height: 50px;
