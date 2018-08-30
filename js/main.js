@@ -1,20 +1,12 @@
-// 二级菜单触发事件
-// var subMenus=document.getElementsByClassName('sub-menu');
-// var items=document.getElementsByClassName('item');
+//搜索框候选
+$('.search').children('input').focus(function () {
+    $('.prepare').show();
+})
+$('.search').children('input').blur(function () {
+    $('.prepare').hide();
+})
 
-// for (var i=0; i<items.length; i++){
-//     // 用闭包实现
-//     !function (i) {
-//         items[i].onmouseenter=function () {
-//             items[i].style.background='rgba(180,180,180,0.5)'
-//             subMenus[i].style.display='block';
-//         }
-//         items[i].onmouseleave=function () {
-//             items[i].style.background='#2b333b'
-//             subMenus[i].style.display='none';
-//         }
-//     }(i)
-// }
+// 二级菜单触发事件
 $('.item').hover(function () {
     var index=$(this).index();
     $('.sub-menu').eq(index).show();
@@ -22,7 +14,6 @@ $('.item').hover(function () {
     var index=$(this).index();
     $('.sub-menu').eq(index).hide();
 });
-
 
 // 返回顶部
 var goTop=document.getElementById('goTop');
