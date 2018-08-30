@@ -36,8 +36,8 @@ function move(obj,json,fn) {
 // move(obj,{attr1:sign1, attr2:sign2},fn)
 function getStyle(obj,attr) {
     if(obj.currentStyle){
-        return getComputedStyle[attr];
+        return document.defaultView.getComputedStyle(obj, null)[attr];//IE
     }else{
-        return getComputedStyle(obj,false)[attr];
+        return getComputedStyle(obj,false)[attr];//其他
     }
 }

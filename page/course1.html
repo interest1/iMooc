@@ -52,8 +52,8 @@
 </ul>
 
 <script>
-    var arr=['前端呀，','真的挺好玩呢！','哈哈，',
-        '我也这么觉得呢！']
+    var arr=['前端呀，','真的挺好玩的呢！','哈哈，',
+        '我也觉得呢！'];
 
     var ul=document.getElementById('list');
     for (var i=0; i<arr.length; i++){
@@ -119,7 +119,7 @@
         list[i].insertBefore(red,mask);
 
         var wid=white.offsetWidth;
-        return {white,red,mask,wid};
+        return {'white':white,'red':red,'mask':mask,'wid':wid};
     }
     // 每个最小间隔发生的事件
     function move(m,r){

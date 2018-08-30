@@ -272,13 +272,13 @@ input::-webkit-input-placeholder{
     line-height: 60px;
     padding-left: 16px;
 }
-.item a{
+.nav-menu{
     color: #b1b1b1;
 }
 .sub-menu{
     width: 650px;
     height: 440px;
-    background: white;
+    background: rgba(255,255,255,1);
     position: absolute;
     left: 216px;
     top: 0px;
