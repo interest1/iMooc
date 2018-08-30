@@ -26,12 +26,30 @@
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script>
-    for (let i=1; i<4; i++){
+    for (var i=1; i<4; i++){
         console.log(i);
         setTimeout(function () {
            console.log(i);
         },0)
     }
+    function compare(v1, v2){
+        return v1-v2
+    }
+    arr=[0,1,15,10,5]
+    arr.sort(compare)
+
+    function fact(n) {
+        return n>1?n*fact(n-1):1;
+    }
+
+    function outer() {
+        inner();
+    }
+    function inner() {
+        console.log(inner.caller.name);
+        console.log(arguments.callee.name);
+    }
+    outer();
 </script>
 
 </body>

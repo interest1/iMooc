@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标悬停详情</title>
+    <style>
+        *{
+            font-size: 24px;
+            color: #5e87c2;
+        }
+        h2{
+            text-align: center;
+        }
+        .content{
+            width: 400px;
+            height: 250px;
+            background: rgba(173, 216, 230, 0.4);
+            margin: 30px auto;
+            overflow: hidden;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+        li{
+            line-height: 50px;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden;
+        }
+
+        ul li a{
+            text-decoration: none;
+            width:200px;
+        }
+        a:hover{
+            text-decoration: underline;
+            color:orange;
+        }
+
+        .tip{
+            position: absolute;
+            font-size: 18px;
+            background: rgba(80, 80, 80, 0.76);
+            left: 0;
+            display: none;
+            z-index: 1;
+            border-radius: 10px;
+            padding: 10px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<h2>鼠标悬停显示详细信息</h2>
+<div class="content">
+    <ul id="ul">
+        <li><a href="#">大不自多 海纳江河。惟学无际 际于天地</a></li>
+        <li><a href="#">形上谓道兮 形下谓器。礼主别异兮 乐主和同</a></li>
+        <li><a href="#">知其不二兮 尔听斯聪。国有成均 在浙之滨</a></li>
+        <li><a href="#">昔言求是 实启尔求真。习坎示教 始见经纶</a></li>
+    </ul>
+</div>
+
+
+<script>
+    !function () {
+        var ul=document.getElementById('ul');
+        var links=document.getElementsByTagName('a');
+        var tip=createTip();
+
+        for (var i=0; i<links.length; i++){
+            links[i].onmousemove=function (e) {
+                tip.innerText=this.innerText;
+                tip.style.display='block';
+                tip.style.left=e.clientX+10+'px';
+                tip.style.top=e.clientY+10+'px';
+            }
+            links[i].onmouseout=function (e) {
+                tip.style.display='none';
+            }
+        }
+    }()
+
+    function createTip() {
+        var div=document.createElement('div');
+        div.className='tip';
+        return document.body.appendChild(div);
+    }
+
+</script>
+</body>
+</html>

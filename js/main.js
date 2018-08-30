@@ -1,20 +1,27 @@
 // 二级菜单触发事件
-var subMenus=document.getElementsByClassName('sub-menu');
-var items=document.getElementsByClassName('item');
+// var subMenus=document.getElementsByClassName('sub-menu');
+// var items=document.getElementsByClassName('item');
 
-for (var i=0; i<items.length; i++){
-    // 用闭包实现
-    !function (i) {
-        items[i].onmouseenter=function () {
-            items[i].style.background='rgba(180,180,180,0.5)'
-            subMenus[i].style.display='block';
-        }
-        items[i].onmouseleave=function () {
-            items[i].style.background='#2b333b'
-            subMenus[i].style.display='none';
-        }
-    }(i)
-}
+// for (var i=0; i<items.length; i++){
+//     // 用闭包实现
+//     !function (i) {
+//         items[i].onmouseenter=function () {
+//             items[i].style.background='rgba(180,180,180,0.5)'
+//             subMenus[i].style.display='block';
+//         }
+//         items[i].onmouseleave=function () {
+//             items[i].style.background='#2b333b'
+//             subMenus[i].style.display='none';
+//         }
+//     }(i)
+// }
+$('.item').hover(function () {
+    var index=$(this).index();
+    $('.sub-menu').eq(index).show();
+},function () {
+    var index=$(this).index();
+    $('.sub-menu').eq(index).hide();
+});
 
 
 // 返回顶部
@@ -28,6 +35,7 @@ goTop.onclick=function back() {
         }
     },10)
 };
+// 侧边小工具栏的显示
 var feedback=document.getElementById('feedback');
 var problem=document.getElementById('problem');
 var dload=document.getElementById('dload');

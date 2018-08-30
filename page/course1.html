@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>歌词渐变</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #6115d3;
+            font-size: 1.5rem;
+        }
+        ul{
+            position: absolute;
+            width: 200px;
+            height: 30px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            list-style-type: none;
+        }
+        li{
+            position: absolute;
+            width: 400px;
+            /*left:100px;*/
+            /*top:100px;*/
+        }
+        .white{
+            position: absolute;
+            color: white;
+        }
+        .red{
+            position: absolute;
+            color: red;
+            font-size: 1.5rem;
+            clip:rect(0px,0px,30px,0px);
+        }
+        .mask{
+            position: absolute;
+            width:0px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<ul id="list">
+</ul>
+
+<script>
+    var arr=['前端呀，','真的挺好玩呢！','哈哈，',
+        '我也这么觉得呢！']
+
+    var ul=document.getElementById('list');
+    for (var i=0; i<arr.length; i++){
+        var li=document.createElement('li');
+        ul.appendChild(li);
+    }
+    var list=ul.getElementsByTagName('li');
+
+    var i=1,
+        detT=50,
+        detPx=5;
+
+    gradual(0);//从白到红的渐变
+
+    var detLT=[];//储存每次渐变时间间隔的数组
+    detLT[0]=gradual(0);//首次渐变的时间间隔
+
+
+    //逐行歌词计时器
+    var timer = setInterval(main,detLT[0]*detT/detPx+500)
+
+    function main() {
+        show(i);//显示白，从二开始
+        gradual(i);//从白到红的渐变，从二开始
+        detLT[i]=gradual(i);
+        i++;
+//setInterval的定时是常量，但可以通过每次清除再开新的setInterval来改间隔
+        //简言之，每次先清除再改间隔
+        clearInterval(timer);
+        // if(i<2){
+        if(i<arr.length){
+            timer = setInterval(main, detLT[i-1]*detT/detPx+300);
+        }
+    }
+
+    //每行渐变动画
+    function gradual(i) {
+        var obj=create(i);
+        var step=0;//渐变计步器
+        var inner=setInterval(function () {
+            move(obj.mask,obj.red);
+            step++;
+            if(step>obj.wid/detPx){
+                clearInterval(inner);
+            }
+        },detT)
+        return obj.wid;
+    }
+    
+    //创建各节点
+    function create(i) {
+        var white=document.createElement('div');
+        list[i].appendChild(white);
+        white.classList.add('white');
+        white.innerHTML=arr[i];
+
+        var mask=document.createElement('div');
+        mask.classList.add('mask');
+        list[i].appendChild(mask);
+
+        var red=white.cloneNode(true);
+        red.classList.add('red');
+        list[i].insertBefore(red,mask);
+
+        var wid=white.offsetWidth;
+        return {white,red,mask,wid};
+    }
+    // 每个最小间隔发生的事件
+    function move(m,r){
+        m.style.width=m.offsetWidth+detPx+'px';
+        clip(m,r);
+    }
+    //裁剪动作
+    function clip(m,r) {
+        var top = m.offsetTop;
+        var right = m.offsetLeft + m.offsetWidth;
+        var bottom = m.offsetTop + m.offsetHeight;
+        var left = m.offsetLeft;
+        r.style.clip = "rect(" + top + "px," + right + "px," + bottom + "px," + left + "px)";
+    }
+    //显示第几句歌词
+    function show(i) {
+        list[i-1].style.display='none';
+        list[i].style.display='block';
+    }
+</script>
+</body>
+</html>

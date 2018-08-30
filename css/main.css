@@ -240,27 +240,6 @@ input::-webkit-input-placeholder{
     position: relative;
 }
 
-/*.user .profile{*/
-    /*height: 72px;*/
-    /*width: 40px;*/
-    /*margin-left: 20px;*/
-
-    /*float: right;*/
-    /*position: relative;*/
-/*}*/
-/*.profile img{*/
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*margin-top: -20px;*/
-    /*margin-left: -20px;*/
-
-    /*width: 40px;*/
-    /*height: 40px;*/
-    /*border-radius: 20px;*/
-/*}*/
-
-
 
 /*menu*/
 .middle{
@@ -307,7 +286,7 @@ input::-webkit-input-placeholder{
     display: none;
 }
 
-
+/*轮播图*/
 .banners{
     width: 936px;
     height: 312px;
@@ -315,7 +294,7 @@ input::-webkit-input-placeholder{
     position: absolute;
     top:0;
     left: 216px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 0 0;
 }
 .banner{
     width: 936px;
@@ -326,6 +305,7 @@ input::-webkit-input-placeholder{
     display: none;
     width: 100%;
     height: 100%;
+    border-radius: 0 10px 0 0;
 }
 .banner .act{
     display: block;
@@ -357,6 +337,7 @@ input::-webkit-input-placeholder{
     background: white;
     overflow: hidden;
     text-align: center;
+    border-radius: 0 0 10px 0;
 }
 .pathBanner .pathItem{
     float: left;
@@ -369,9 +350,10 @@ input::-webkit-input-placeholder{
 }
 
 /*Courses*/
-.courses-practice, .courses-freshman{
+
+.works, .videos{
     width: 1152px;
-    height: 300px;
+    height: 250px;
     margin: 0 auto;
 }
 .headline{
@@ -381,11 +363,15 @@ input::-webkit-input-placeholder{
     letter-spacing: 5px;
 }
 
-.courses{
-    margin: 20px 0 20px 0;
+.courses .course{
+    display: block;
+    margin-top: 30px;
+}
+.course:hover{
+    color: red;
 }
 .courses .course+.course{
-    margin-left: 18px;
+    margin-left: 96px;
 }
 .course{
     float: left;
@@ -397,20 +383,9 @@ input::-webkit-input-placeholder{
     background: url(../img/loading.gif) 50% no-repeat;
 
 }
-.info{
-    width: 216px;
+.course p{
+    text-align: center;
 }
-.info .h3{
-    margin: 0 auto;
-    font-size: 16px;
-}
-.info .info-detail{
-    margin: 10px 10px 10px 0;
-}
-.info .info-detail span{
-    margin: 10px 10px 10px 0;
-}
-
 
 .clearfix:before,
 .clearfix:after{
