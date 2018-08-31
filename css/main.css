@@ -156,10 +156,13 @@ input::-webkit-input-placeholder{
     display: none;
     position: absolute;
     top: 60px;
-    width: 200px;
-    height: 50px;
+    width: 300px;
     background: white;
     z-index: 1;
+}
+.prepare li{
+    display: block;
+    line-height: 34px;
 }
 
     /*用户中心*/
@@ -170,19 +173,12 @@ input::-webkit-input-placeholder{
     position: relative;
 }
 @media screen and (max-width:1350px){
-    /*header{*/
-        /*width: 1350px;*/
-    /*}*/
     .search input{
         width: 200px;
     }
-    /*.user{*/
-        /*float: left;*/
-        /*line-height: 72px;*/
-        /*position: relative;*/
-        /*margin-left: 20px;*/
-        /*display: inline-block;*/
-    /*}*/
+    .prepare{
+        width: 200px;
+    }
 }
 
 .app, .car, .profile{

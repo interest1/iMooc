@@ -1,10 +1,26 @@
 //搜索框候选
-$('.search').children('input').focus(function () {
+var input=$('.search').children('input');
+input.focus(function () {
     $('.prepare').show();
 })
-$('.search').children('input').blur(function () {
-    $('.prepare').hide();
+// input.blur(function () {
+//     $('.prepare').hide();
+// })
+$('.prepare').on('click','li',function(){
+    input.attr('value',$(this).html())
 })
+search();
+var names=['歌词渐变效果','带留言板的小游戏','鼠标悬停显示详情'];
+var hrefs=["page/course1.html","http://www.zjuice.cn","page/course2.html"]
+function search() {
+    $('.icon-search').click(function () {
+        // var id=$.inArray(input.value,names);
+        // console.log(id);
+        console.log(input.value);
+        location.href=hrefs[id];
+    })
+}
+
 
 // 二级菜单触发事件
 $('.item').hover(function () {
