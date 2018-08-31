@@ -7,49 +7,40 @@
         *{
             padding: 0;
             margin: 0;
+            font-size: 1.6rem;
         }
-        .box{
-            width: 200px;
-            line-height: 100px;
-            border: 1px solid #000;
-        }
-        .inner{
+        ul{
+            position: absolute;
+            width: 340px;
+            height: 150px;
+            line-height: 150px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+            text-align: center;
+            list-style-type: none;
             background: lightblue;
+        }
+        li{
+            position: absolute;
+            width: 320px;
+            /*left:100px;*/
+            /*top:100px;*/
         }
     </style>
 </head>
 <body>
 
-<div class="box">
-    <a href="https://www.baidu.com">百度</a>
-</div>
+<ul id="list">
+    <li>hello there</li>
+</ul>
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script>
-    for (var i=1; i<4; i++){
-        console.log(i);
-        setTimeout(function () {
-           console.log(i);
-        },0)
-    }
-    function compare(v1, v2){
-        return v1-v2
-    }
-    arr=[0,1,15,10,5]
-    arr.sort(compare)
 
-    function fact(n) {
-        return n>1?n*fact(n-1):1;
-    }
-
-    function outer() {
-        inner();
-    }
-    function inner() {
-        console.log(inner.caller.name);
-        console.log(arguments.callee.name);
-    }
-    outer();
 </script>
 
 </body>

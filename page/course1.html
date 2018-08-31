@@ -10,24 +10,28 @@
         }
         body{
             background: #6115d3;
-            font-size: 1.5rem;
+            font-size: 2.4rem;
         }
         ul{
             position: absolute;
-            width: 200px;
-            height: 30px;
+            width: 310px;
+            height: 50px;
+            line-height: 50px;
             left: 0;
             top: 0;
             right: 0;
             bottom: 0;
             margin: auto;
+
             list-style-type: none;
+            /*background: lightblue;*/
         }
         li{
             position: absolute;
-            width: 400px;
-            /*left:100px;*/
-            /*top:100px;*/
+            width: 310px;
+        }
+        li div{
+            margin: 0 auto;
         }
         .white{
             position: absolute;
@@ -36,13 +40,12 @@
         .red{
             position: absolute;
             color: red;
-            font-size: 1.5rem;
-            clip:rect(0px,0px,30px,0px);
+            font-size: 2.4rem;
+            clip:rect(0px,0px,50px,0px);
         }
         .mask{
             position: absolute;
-            width:0px;
-            height: 30px;
+            height: 50px;
         }
 
     </style>
@@ -66,7 +69,7 @@
         detT=50,
         detPx=5;
 
-    gradual(0);//从白到红的渐变
+    gradual(0);//首次从白到红的渐变
 
     var detLT=[];//储存每次渐变时间间隔的数组
     detLT[0]=gradual(0);//首次渐变的时间间隔
