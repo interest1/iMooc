@@ -136,6 +136,7 @@ header ul li{
     display: inline-block;
     margin-right: 30px;
 }
+
 .search{
     position: relative;
     line-height: 72px;
@@ -149,13 +150,32 @@ header ul li{
     padding-bottom: 10px;
     /*text-align: center;*/
 }
+/*#form .text{*/
+    /*float: left;*/
+    /*!*display: inline-block;*!*/
+    /*width: 300px;*/
+    /*border: 1px solid #b3bdc6;*/
+    /*border-width: 0 0 1px 0;*/
+    /*outline: none;*/
+    /*padding-bottom: 10px;*/
+/*}*/
 input::-webkit-input-placeholder{
     text-align: center;
 }
+.button{
+    border: 0;
+    outline: none;
+    background: url(../img/search.jpg) no-repeat;
+    width: 27px;
+    height: 25px;
+    /*display: inline-block;*/
+    float: left;
+    cursor: pointer;
+}
 .prepare{
-    display: none;
+    display: block;
     position: absolute;
-    top: 60px;
+    top: 30px;
     width: 300px;
     background: white;
     z-index: 1;
@@ -173,6 +193,9 @@ input::-webkit-input-placeholder{
     position: relative;
 }
 @media screen and (max-width:1350px){
+    .text{
+        width: 200px;
+    }
     .search input{
         width: 200px;
     }

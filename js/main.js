@@ -1,5 +1,5 @@
 //搜索框候选
-var input=$('.search').children('input');
+var input=$('.text');
 input.focus(function () {
     $('.prepare').show();
 })
@@ -9,17 +9,20 @@ input.focus(function () {
 $('.prepare').on('click','li',function(){
     input.attr('value',$(this).html())
 })
-search();
 var names=['歌词渐变效果','带留言板的小游戏','鼠标悬停显示详情'];
 var hrefs=["page/course1.html","http://www.zjuice.cn","page/course2.html"]
-function search() {
-    $('.icon-search').click(function () {
-        // var id=$.inArray(input.value,names);
-        // console.log(id);
-        console.log(input.value);
-        location.href=hrefs[id];
-    })
-}
+
+$('.button').click(function () {
+    console.log(input.value);
+    var id=$.inArray(input.value,names);
+    console.log(id);
+})
+// $('.icon-search:before').click(function () {
+//     // var id=$.inArray(input.value,names);
+//     console.log('a');
+//     console.log(input.value);
+//     location.href=hrefs[id];
+// })
 
 
 // 二级菜单触发事件
