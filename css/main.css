@@ -27,11 +27,11 @@ a{
 /*icon setting*/
 @font-face {
     font-family: 'iconfont';  /* project id 683052 */
-    src: url('//at.alicdn.com/t/font_683052_0gicf9f83us7nwmi.eot');
-    src: url('//at.alicdn.com/t/font_683052_0gicf9f83us7nwmi.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_683052_0gicf9f83us7nwmi.woff') format('woff'),
-    url('//at.alicdn.com/t/font_683052_0gicf9f83us7nwmi.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_683052_0gicf9f83us7nwmi.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_683052_6ozwanx7835.eot');
+    src: url('//at.alicdn.com/t/font_683052_6ozwanx7835.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_683052_6ozwanx7835.woff') format('woff'),
+    url('//at.alicdn.com/t/font_683052_6ozwanx7835.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_683052_6ozwanx7835.svg#iconfont') format('svg');
 }
 
 .icon{
@@ -99,6 +99,16 @@ a{
 }
 .icon-cancel:hover {
     color: red;
+}
+.icon-weixin:before {
+    font-size: 30px;
+    color: #c5c5c5;
+    content: '\e609';
+}
+.icon-weibo:before {
+    font-size: 30px;
+    color: #c5c5c5;
+    content: '\e6c6';
 }
 
 

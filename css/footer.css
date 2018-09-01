@@ -24,7 +24,8 @@ footer{
     color: gray;
 }
 .left ul li a:hover{
-    color: black;
+    cursor: default;
+    /*color: black;*/
 }
 
 .left ul li+li{
