@@ -11,17 +11,25 @@ input.blur(function () {
 })
 $('.prepare').on('click','li',function(){
     $('.text').attr('value',$(this).html())
+    id=$(this).attr('id');
 })
-var names=['常用单位转换','歌词渐变效果','带留言板的小游戏','鼠标悬停显示详情'];
+var ids=['a','b','c','d']
 var path="//www.wenkoor.com/";
-var hrefs=[path+"page/convert.html",path+"page/KTV.html",
+var hrefs=[path+"page/ktv.html",path+"page/convert.html",
     "http://www.zjuice.cn", path+"page/mouseover.html"]
-
 $('.icon-search').click(function () {
-    var id=$.inArray($('.text').val(),names);
-    window.open(hrefs[id],'_blank');
-    // $('.text').val('');
+    // var index=$.inArray($('.text').val(),ids);
+    var index=$.inArray(id,ids);
+    window.open(hrefs[index],'_blank');
 })
+
+// function search(id) {
+//     console.log(id);
+//     $('.icon-search').click(function () {
+//         var index=$.inArray(id,ids);
+//         window.open(hrefs[index],'_blank');
+//     })
+// }
 
 
 // 二级菜单触发事件
