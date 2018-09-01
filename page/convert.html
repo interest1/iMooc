@@ -14,17 +14,17 @@ minimum-scale=0.3, maximum-scale=0.3, user-scalable=no">
             background: #eee;
         }
         .main{
-            width: 19rem;
+            width: 25rem;
             height: 10rem;
             margin: 0 auto;
         }
         .title{
-            font-size:0.8rem;
+            font-size:1rem;
         }
         .box{
             position: relative;
-            left:0.2rem;
-            top:.1rem;
+            left:0.1rem;
+            margin-bottom: .2rem;
         }
         input{
             width:1.5rem;
@@ -54,7 +54,7 @@ minimum-scale=0.3, maximum-scale=0.3, user-scalable=no">
         }
 
         .p{
-            margin-bottom: .2rem;
+            /*margin-bottom: .2rem;*/
             color: #0e7dff;
         }
         .result{
@@ -72,15 +72,14 @@ minimum-scale=0.3, maximum-scale=0.3, user-scalable=no">
         你肯定知道，但有的长辈没上过小学就不一定知道了<br>
         这款应用就是为此而生的，赶快试试吧(支持手机端)
     </div>
-    <br>
     <div class="box" id="box1">
-        <p class="p">数字→人民币</p>
+        <div class="p">数字→人民币</div>
         <input type="text" id="num" placeholder="000.00">
         <button type="button" onclick="clk1()">转换</button>
         <div class="result" id="result1"></div>
     </div>
     <div class="box" id="box3">
-        <p class="p">千克→斤</p>
+        <div class="p">千克→斤</div>
         <input type="text" id="kg" placeholder="00.00">千克
         <button type="button" onclick="clk3()">转换</button>
         <div class="result" id="result3"></div>
