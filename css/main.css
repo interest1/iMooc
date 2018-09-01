@@ -306,13 +306,20 @@ input::-webkit-input-placeholder{
 }
 .sub-menu{
     width: 650px;
-    height: 440px;
+    height: 400px;
     background: rgba(255,255,255,1);
     position: absolute;
     left: 216px;
     top: 0px;
     z-index: 2;
-    display: none;
+    display: block;
+    padding: 20px;
+}
+.sub-menu a:hover{
+    cursor: default;
+}
+.sub-title{
+    color: red;
 }
 
 /*轮播图*/
