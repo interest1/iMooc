@@ -12,10 +12,10 @@ input.blur(function () {
 $('.prepare').on('click','li',function(){
     $('.text').attr('value',$(this).html())
 })
-var names=['歌词渐变效果','带留言板的小游戏','鼠标悬停显示详情'];
-var path="//www.wenkoor.com/"
-var hrefs=[path+"page/KTV.html","http://www.zjuice.cn",
-    path+"page/convert.html",path+"mouseover.html"]
+var names=['常用单位转换','歌词渐变效果','带留言板的小游戏','鼠标悬停显示详情'];
+var path="//www.wenkoor.com/";
+var hrefs=[path+"page/convert.html",path+"page/KTV.html",
+    "http://www.zjuice.cn", path+"mouseover.html"]
 
 $('.icon-search').click(function () {
     var id=$.inArray($('.text').val(),names);
