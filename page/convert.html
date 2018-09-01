@@ -12,6 +12,11 @@
         body{
             background: #eee;
         }
+        .main{
+            width: 30rem;
+            height: 10rem;
+            margin: 0 auto;
+        }
         .title{
             font-size: 1rem;
         }
@@ -31,9 +36,17 @@
             width:6rem;
         }
         button{
+            width: 3rem;
+            height: 1.8rem;
             margin-top: .5rem;
             display: block;
+            font-size: 1rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            border-radius: 0.5rem;
             background-color: #ff6d4d;
+            color: #fcfcfc;
+            outline: none;
         }
         .p{
             margin-bottom: .2rem;
@@ -46,21 +59,24 @@
     </style>
 </head>
 <body>
-<div class="title box">送给长辈的神器——<br>
-    有的上年纪的长辈面对带小数点的数字不知道是几元几角，<br>
-    看着电子体重秤的千克数字不知道是多少斤，<br>
-    那么这款应用就是为你们打造的</div>
-<div class="box" id="box1">
-    <p class="p">数字→人民币</p>
-    <input type="text" id="num" placeholder="数字">
-    <button type="button" onclick="clk1()">转换</button>
-    <div class="result" id="result1"></div>
-</div>
-<div class="box" id="box3">
-    <p class="p">千克→斤</p>
-    <input type="text" id="kg" placeholder="数字">千克
-    <button type="button" onclick="clk3()">转换</button>
-    <div class="result" id="result3"></div>
+<div class="main">
+    <div class="title box"><b>送给长辈的神器——</b><br>
+        有的上年纪的长辈看着带小数点的数字不知道是多少钱，<br>
+        看着电子体重秤的数字不知道换算起来是多少斤，<br>
+        那么这款应用就是为你们打造的</div>
+    <br>
+    <div class="box" id="box1">
+        <p class="p">数字→人民币</p>
+        <input type="text" id="num" placeholder="000.00">
+        <button type="button" onclick="clk1()">转换</button>
+        <div class="result" id="result1"></div>
+    </div>
+    <div class="box" id="box3">
+        <p class="p">千克→斤</p>
+        <input type="text" id="kg" placeholder="00.00">千克
+        <button type="button" onclick="clk3()">转换</button>
+        <div class="result" id="result3"></div>
+    </div>
 </div>
 
 <script>
@@ -117,8 +133,6 @@
             result1.innerHTML=sum+sumx;
         }
     }
-
-
 
     //千克或公斤转斤———————————————————————————————————————
     unitkg=['','十 ','百 ','']
