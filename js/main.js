@@ -4,10 +4,13 @@ input.focus(function () {
     $('.prepare').show();
 })
 input.blur(function () {
-    $('.prepare').hide();
+    setTimeout(function () {
+        $('.prepare').hide();
+    },300)
+
 })
 $('.prepare').on('click','li',function(){
-    input.attr('value',$(this).html())
+    $('.text').attr('value',$(this).html())
 })
 var names=['歌词渐变效果','带留言板的小游戏','鼠标悬停显示详情'];
 var path="http://www.wenkoor.com/"
@@ -17,13 +20,8 @@ var hrefs=[path+"page/KTV.html","http://www.zjuice.cn",
 $('.icon-search').click(function () {
     var id=$.inArray($('.text').val(),names);
     window.open(hrefs[id],'_blank');
-    console.log(hrefs[id]);
-    $('.text').val('');
-    // location.href=hrefs[id];
+    // $('.text').val('');
 })
-// $('.icon-search').click(function () {
-//     location.href="http://www.zjuice.cn";
-// })
 
 
 // 二级菜单触发事件

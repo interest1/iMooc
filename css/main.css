@@ -165,7 +165,7 @@ header ul li{
     text-align: center;
 }
 .prepare{
-    display: block;
+    display: none;
     position: absolute;
     top: 72px;
     width: 300px;
