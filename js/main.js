@@ -10,18 +10,17 @@ $('.prepare').on('click','li',function(){
     input.attr('value',$(this).html())
 })
 var names=['歌词渐变效果','带留言板的小游戏','鼠标悬停显示详情'];
-var hrefs=["page/KTV.html","http://www.zjuice.cn","page/mouseover.html"]
+var path="http://www.wenkoor.com/"
+var hrefs=[path+"page/KTV.html","http://www.zjuice.cn",
+    path+"mouseover.html",path+"page/convert.html"]
 
-$('.button').click(function () {
-    console.log(input.value);
-    var id=$.inArray(input.value,names);
-    console.log(id);
+$('.icon-search').click(function () {
+    var id=$.inArray($('.text').val(),names);
+    window.open(hrefs[id],'_blank')
+    // location.href=hrefs[id];
 })
-// $('.icon-search:before').click(function () {
-//     // var id=$.inArray(input.value,names);
-//     console.log('a');
-//     console.log(input.value);
-//     location.href=hrefs[id];
+// $('.icon-search').click(function () {
+//     location.href="http://www.zjuice.cn";
 // })
 
 
