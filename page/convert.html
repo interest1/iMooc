@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转换</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size:1.2rem;
+        }
+        body{
+            background: #eee;
+        }
+        .title{
+            font-size: 1rem;
+        }
+        .box{
+            position: relative;
+            left:1rem;
+            top:1rem;
+        }
+        input{
+            width:1.5rem;
+            outline: none;
+        }
+        #num{
+            width:7rem;
+        }
+        #kg{
+            width:6rem;
+        }
+        button{
+            margin-top: .5rem;
+            display: block;
+            background-color: #ff6d4d;
+        }
+        .p{
+            margin-bottom: .2rem;
+            color: #0e7dff;
+        }
+        .result{
+            height:2rem;
+        }
+
+    </style>
+</head>
+<body>
+<div class="title box">送给长辈的神器——<br>
+    有的上年纪的长辈面对带小数点的数字不知道是几元几角，<br>
+    看着电子体重秤的千克数字不知道是多少斤，<br>
+    那么这款应用就是为你们打造的</div>
+<div class="box" id="box1">
+    <p class="p">数字→人民币</p>
+    <input type="text" id="num" placeholder="数字">
+    <button type="button" onclick="clk1()">转换</button>
+    <div class="result" id="result1"></div>
+</div>
+<div class="box" id="box3">
+    <p class="p">千克→斤</p>
+    <input type="text" id="kg" placeholder="数字">千克
+    <button type="button" onclick="clk3()">转换</button>
+    <div class="result" id="result3"></div>
+</div>
+
+<script>
+    var num=document.getElementById('num');
+    var kg=document.getElementById('kg');
+    var result1=document.getElementById('result1');
+    var result2=document.getElementById('result2');
+    unit=['元 ','','百 ','千 ','万 ','','','','','',''];
+    unitx=['角','分'];
+    var isMb = /applewebkit.*mobile.*/.test(window.navigator.userAgent.toLowerCase());
+    if(isMb==true){
+        num.style.width='6rem';
+        document.documentElement.style.fontSize="6rem";
+        document.getElementById("box1").style.top='2rem';
+        document.getElementById("box3").style.top='2rem';
+    }
+    function clk1() {
+        var sum='',sumx='';
+        var s=num.value.split('.');
+
+        var len=s[0].length;
+        if(num.value==''){
+
+        }else{
+            for(var i=0;i<len-1;i++){// 整元判断
+                if(s[0].substr(len-i-2,1)!='0'){
+                    item=s[0].substr(len-i-2,1)+unit[i+1];
+                    sum=item+sum;
+                }
+            }
+            if(s[0].substr(len-2,2)!='00'){
+                sum=sum+s[0][len-1]+unit[0];
+            }
+            //———————————————————————————
+            if(s.length==1){//如果角分没有
+                sumx='';
+            }
+
+            else{//如果角分有
+                var lenx=s[1].length;
+                if(s[1][1]!='0'&&lenx>1){//有角分，且分不为0
+                    for(var i=0;i<2;i++){
+                        itemx=s[1].substr(i,1)+unitx[i];
+                        sumx=sumx+' '+itemx;
+                    }
+                }
+                else if(s[1]=='0' ||s[1]=='00'){//角分为0或00
+                    sumx='';
+                }
+                else{//角不为0，分不存在或为0
+                    sumx=s[1][0]+unitx[0];
+                }
+            }
+            result1.innerHTML=sum+sumx;
+        }
+    }
+
+
+
+    //千克或公斤转斤———————————————————————————————————————
+    unitkg=['','十 ','百 ','']
+    function clk3() {
+        if(kg.value!=''){
+            var sum='斤 ';
+            var jin=parseFloat(kg.value)*2;
+            var s=jin.toString().split('.');
+            var skg=kg.value.toString().split('.');
+            var len=s[0].length;
+            for(var i=0;i<len;i++){
+                sum=s[0][len-i-1]+unitkg[i]+sum;
+            }
+
+            if(s[0].length==3&&s[0][1]=='0'){
+                sumkg='斤 ';
+                sumkg=s[0][0]+unitkg[2]+s[0][2]+sumkg;
+                if(s.length==2&&s[1]!='0'){
+                    result3.innerHTML=sumkg+s[1];
+                }else{
+                    result3.innerHTML=sumkg;
+                }
+            }else{
+                if(s.length==2&&s[1]!='0'){
+                    result3.innerHTML=sum+s[1];
+                }else{
+                    result3.innerHTML=sum;
+                }
+            }
+
+            //以下判断将覆盖以上
+            if(s[0][len-1]=='0'){
+                var sum='斤';
+                for(var i=0;i<len-1;i++){
+                    sum=s[0][len-i-2]+unitkg[i+1]+sum;
+                }
+                if(s[0][len-2]=='0'){
+                    if((s.length==2&&s[1]=='0')||s.length==1){
+                        result3.innerHTML='1百斤';
+                    }else{
+                        result3.innerHTML='1百斤 '+s[1];
+                    }
+                }
+                else if((s.length==2&&s[1]=='0')||s.length==1){
+                    result3.innerHTML=sum;
+                }
+                else{
+                    result3.innerHTML=sum+s[1];
+                }
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

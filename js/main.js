@@ -10,7 +10,7 @@ $('.prepare').on('click','li',function(){
     input.attr('value',$(this).html())
 })
 var names=['歌词渐变效果','带留言板的小游戏','鼠标悬停显示详情'];
-var hrefs=["page/course1.html","http://www.zjuice.cn","page/course2.html"]
+var hrefs=["page/KTV.html","http://www.zjuice.cn","page/mouseover.html"]
 
 $('.button').click(function () {
     console.log(input.value);
