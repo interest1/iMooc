@@ -390,6 +390,9 @@ input::-webkit-input-placeholder{
     width: 130px;
     margin: 28px;
 }
+.pathItem:hover{
+    cursor: default;
+}
 .desc{
     font-size: 11px;
     color: #b1b1b1;
