@@ -13,12 +13,11 @@ $('.prepare').on('click','li',function(){
     $('.text').attr('value',$(this).html())
     id=$(this).attr('id');
 })
-var ids=['a','b','c','d']
 var path="//www.wenkoor.com/";
+var ids=['a','b','c','d']
 var hrefs=[path+"page/ktv.html",path+"page/convert.html",
     "http://www.zjuice.cn", path+"page/mouseover.html"]
 $('.icon-search').click(function () {
-    // var index=$.inArray($('.text').val(),ids);
     var index=$.inArray(id,ids);
     window.open(hrefs[index],'_blank');
 })
