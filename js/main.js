@@ -18,15 +18,15 @@ var ids=['a','b','c','d']
 var hrefs=[path+"page/ktv.html",path+"page/convert.html",
     "http://www.zjuice.cn", path+"page/mouseover.html"]
 $('.icon-search').click(function () {
+    id=typeof id=="undefined"?'a':id;
     var index=$.inArray(id,ids);
     window.open(hrefs[index],'_blank');
 })
 
 // function search(id) {
-//     console.log(id);
 //     $('.icon-search').click(function () {
-//         var index=$.inArray(id,ids);
-//         window.open(hrefs[index],'_blank');
+//         var index = $.inArray(id, ids) || 'a';
+//         window.open(hrefs[index], '_blank');
 //     })
 // }
 
