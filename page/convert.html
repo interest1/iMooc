@@ -64,7 +64,7 @@
 </head>
 <body>
 <div class="main">
-    <div class="title box"><b>送给长辈的神器——</b><br>
+    <div class="title box" id="title"><b>送给长辈的神器——</b><br>
         微信红包888.88是多少钱？<br>
         电子体重秤显示58.7，那是多少斤?<br>
         你肯定知道，但有的长辈没上过小学就不一定知道了<br>
@@ -88,6 +88,7 @@
 <script>
     var num=document.getElementById('num');
     var kg=document.getElementById('kg');
+    var title=document.getElementById('title');
     var result1=document.getElementById('result1');
     var result2=document.getElementById('result2');
     unit=['元 ','','百 ','千 ','万 ','','','','','',''];
@@ -95,6 +96,7 @@
     var isMb = /applewebkit.*mobile.*/.test(window.navigator.userAgent.toLowerCase());
     if(isMb==true){
         num.style.width='6rem';
+        title.style.fontSize='0.5rem';
         document.documentElement.style.fontSize="6rem";
         document.getElementById("box1").style.top='2rem';
         document.getElementById("box3").style.top='2rem';
