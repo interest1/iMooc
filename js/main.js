@@ -16,7 +16,9 @@ var hrefs=[path+"page/KTV.html","http://www.zjuice.cn",
 
 $('.icon-search').click(function () {
     var id=$.inArray($('.text').val(),names);
-    window.open(hrefs[id],'_blank')
+    window.open(hrefs[id],'_blank');
+    console.log(hrefs[id]);
+    $('.text').val('');
     // location.href=hrefs[id];
 })
 // $('.icon-search').click(function () {
