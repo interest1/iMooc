@@ -3,9 +3,9 @@ var input=$('.text');
 input.focus(function () {
     $('.prepare').show();
 })
-// input.blur(function () {
-//     $('.prepare').hide();
-// })
+input.blur(function () {
+    $('.prepare').hide();
+})
 $('.prepare').on('click','li',function(){
     input.attr('value',$(this).html())
 })
