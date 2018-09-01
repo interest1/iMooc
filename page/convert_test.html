@@ -18,7 +18,7 @@
             margin: 0 auto;
         }
         .title{
-            font-size:0.8rem;
+            font-size: 1rem;
         }
         .box{
             position: relative;
@@ -146,23 +146,23 @@
         if(kg.value!=''){
             var sum='斤 ';
             var jin=parseFloat(kg.value)*2;
-            var s=jin.toString().split('.');
+            var s=jin.toString().split('.');//拆分s[0]和 s[1]
             var skg=kg.value.toString().split('.');
-            var len=s[0].length;//
+            var len=s[0].length;//整数部分的长度
             for(var i=0;i<len;i++){
-                sum=s[0][len-i-1]+unitkg[i]+sum;
+                sum=s[0][len-i-1]+unitkg[i]+sum;//拼接百十个位的数字+单位
             }
 
-            if(s[0].length==3&&s[0][1]=='0'){
-                sumkg='斤 ';
+            if(s[0].length==3&&s[0][1]=='0')//三位数，分为0
+                var sumkg='斤 ';
                 sumkg=s[0][0]+unitkg[2]+s[0][2]+sumkg;
-                if(s.length==2&&s[1]!='0'){
+                if(s.length==2&&s[1]!='0'){//有小数且小数不为0
                     result3.innerHTML=sumkg+s[1];
                 }else{
                     result3.innerHTML=sumkg;
                 }
-            }else{
-                if(s.length==2&&s[1]!='0'){
+            }else{                         //
+                if(s.length==2&&s[1]!='0'){//有小数且小数不为0
                     result3.innerHTML=sum+s[1];
                 }else{
                     result3.innerHTML=sum;
@@ -170,7 +170,7 @@
             }
 
             //以下判断将覆盖以上
-            if(s[0][len-1]=='0'){
+            if(s[0][len-1]=='0'){//
                 var sum='斤';
                 for(var i=0;i<len-1;i++){
                     sum=s[0][len-i-2]+unitkg[i+1]+sum;
@@ -189,7 +189,9 @@
                     result3.innerHTML=sum+s[1];
                 }
             }
-        }
+            // if(s[0].length>3){
+            //     result3.innerHTML="请输入不超过100的数字"
+            // }
     }
 
 
