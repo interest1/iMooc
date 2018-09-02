@@ -170,19 +170,19 @@
             }
 
             //以下判断将覆盖以上
-            if(s[0][len-1]=='0'){//
+            if(s[0][len-1]=='0'){//整数的最后一位是0
                 var sum='斤';
                 for(var i=0;i<len-1;i++){
                     sum=s[0][len-i-2]+unitkg[i+1]+sum;
                 }
-                if(s[0][len-2]=='0'){
+                if(s[0][len-2]=='0'){//整数的倒数第二位是0
                     if((s.length==2&&s[1]=='0')||s.length==1){
                         result3.innerHTML='1百斤';
                     }else{
                         result3.innerHTML='1百斤 '+s[1];
                     }
                 }
-                else if((s.length==2&&s[1]=='0')||s.length==1){
+                else if((s.length==2&&s[1]=='0')||s.length==1){//有小数且小数位0或无小数位
                     result3.innerHTML=sum;
                 }
                 else{

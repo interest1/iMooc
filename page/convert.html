@@ -68,22 +68,22 @@ minimum-scale=0.3, maximum-scale=0.3, user-scalable=no">
 <div class="main" id="main">
     <div class="title box" id="title">
         <b>送给长辈的神器——</b><br>
-        微信红包888.88是多少钱？<br>
         电子体重秤显示58.7，那是多少斤?<br>
-        你肯定知道，但有的长辈没上过小学就不一定知道了<br>
+        微信红包888.88是多少钱？<br>
+        你肯定知道，但有的长辈没上过小学就不一定了<br>
         这款应用就是为此而生的，赶快试试吧(支持手机端)
-    </div>
-    <div class="box" id="box1">
-        <div class="p">数字→人民币</div>
-        <input type="text" id="num" placeholder="000.00">
-        <button type="button" onclick="clk1()">转换</button>
-        <div class="result" id="result1"></div>
     </div>
     <div class="box" id="box3">
         <div class="p">千克→斤</div>
         <input type="text" id="kg" placeholder="00.00">千克
         <button type="button" onclick="clk3()">转换</button>
         <div class="result" id="result3"></div>
+    </div>
+    <div class="box" id="box1">
+        <div class="p">数字→人民币</div>
+        <input type="text" id="num" placeholder="000.00">
+        <button type="button" onclick="clk1()">转换</button>
+        <div class="result" id="result1"></div>
     </div>
 </div>
 
@@ -194,6 +194,9 @@ minimum-scale=0.3, maximum-scale=0.3, user-scalable=no">
                 else{
                     result3.innerHTML=sum+s[1];
                 }
+            }
+            if(parseFloat(kg.value)>=100){
+                result3.innerHTML="超出体重秤的范围啦";
             }
         }
     }
