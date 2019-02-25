@@ -5,7 +5,7 @@ setInterval(function() {
     index++;
     show(index%num);
     move(pics[index%num],-1100)
-},4000);
+},360000);
 
 var pics=document.getElementById('banner').getElementsByTagName('img');
 var dots=document.getElementById('dots').getElementsByTagName('span');
